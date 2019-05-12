@@ -1,0 +1,9 @@
+[alias]
+	lg = log --oneline --decorate --graph
+	co = checkout
+	cob = checkout -b
+	comp = "!f() { git rev-list --left-right --count $1...$2; }; f"
+	s = status
+[user]
+	name = Michael Humphries
+	email = mike.humphries@digital.ncsc.gov.uk
