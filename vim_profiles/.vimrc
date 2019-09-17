@@ -1,0 +1,13 @@
+syntax on
+set number
+set ruler
+set bs=2
+set wrap
+set textwidth=79
+set formatoptions=tcqrn1
+set tabstop=4
+set shiftwidth=4
+set softtabstop=2
+set expandtab
+set noshiftround
+set laststatus=2
