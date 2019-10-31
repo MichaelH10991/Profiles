@@ -1,0 +1,10 @@
+Host github.com-work
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+#personal 
+Host github.com-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal

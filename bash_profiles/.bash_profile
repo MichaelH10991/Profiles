@@ -1,10 +1,13 @@
-
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 shopt -s autocd
 
+export master_list=("1234" "5678")
+
 # alias kl='kill $(ps | awk ''{print $1}'')' 
 
+alias c='code .'
+alias cl='clear'
 alias parrot='curl parrot.live'
 alias searchports='f(){ sh lsof -nP -i4TCP:"$1"; }; f'
 alias ls='ls -G'
@@ -53,6 +56,10 @@ else
     fi
 fi
 unset __conda_setup
+
+# comment this out if you want to use anaconda virtualenv
+conda deactivate
+
 # <<< conda init <<<
 
 # Rust cargo path - cargo is the package manager for rust.

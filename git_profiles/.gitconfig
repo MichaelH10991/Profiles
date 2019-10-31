@@ -2,8 +2,11 @@
 	lg = log --oneline --decorate --graph
 	co = checkout
 	cob = checkout -b
-	comp = "!f() { git rev-list --left-right --count $1...$2; }; f"
+	comp = "!f() { git rev-list --left-right --count $branch...$2; }; f"
 	s = status
+	b = branch
+	col = "!f() { git branch; }; f"
+#	cb = "!f() { git branch | grep \* | cut -d ' ' -f2; }; f"
 [user]
 	name = Michael Humphries
-	email = email
+	email = mike.humphries@digital.ncsc.gov.uk
