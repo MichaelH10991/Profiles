@@ -2,8 +2,6 @@
 
 shopt -s autocd
 
-export master_list=("1234" "5678")
-
 # alias kl='kill $(ps | awk ''{print $1}'')' 
 
 alias c='code .'
@@ -16,7 +14,7 @@ alias reload='source ~/.bash_profile'
 alias replace-ext='f(){ sh ~/scripts/./replace-ext.sh $1 $2 ; }; f'
 
 export PATH="$PATH:/$HOME/Applications"
-
+export CPATH="$PATH:/$HOME/Development/include"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
