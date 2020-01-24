@@ -11,4 +11,6 @@ echo "copying ssh config"
 cp $route.ssh/config git_profiles/
 echo "copying zshrc"
 cp $route.zshrc zsh_profiles/
+echo "copying custom zsh"
+cp -r $route.oh-my-zsh/custom/ zsh_profiles/
 echo "done!"
