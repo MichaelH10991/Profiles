@@ -7,11 +7,10 @@ shopt -s autocd
 alias c='code .'
 alias cl='clear'
 alias parrot='curl parrot.live'
-alias searchports='f(){ sh lsof -nP -i4TCP:"$1"; }; f'
+alias sp='lsof -nP -i 4TCP'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias reload='source ~/.bash_profile'
-alias replace-ext='f(){ sh ~/scripts/./replace-ext.sh $1 $2 ; }; f'
 
 export PATH="$PATH:/$HOME/Applications"
 export CPATH="$PATH:/$HOME/Development/include"
@@ -60,7 +59,19 @@ conda deactivate
 
 # <<< conda init <<<
 
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/michaelh/.nvm/versions/node/v11.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Users/michaelh/.nvm/versions/node/v11.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/michaelh/.nvm/versions/node/v11.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /Users/michaelh/.nvm/versions/node/v11.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/michaelh/.nvm/versions/node/v11.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /Users/michaelh/.nvm/versions/node/v11.13.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
+
 # Rust cargo path - cargo is the package manager for rust.
 export PATH="$HOME/.cargo/bin:$PATH"
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export CLICOLOR=1
+
+nvm use v10.16.3
