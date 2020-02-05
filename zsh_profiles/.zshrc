@@ -3,8 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/michaelh/.oh-my-zsh"
-export PATH="$PATH:/$HOME/Applications"
-export CPATH="$PATH:/$HOME/Development/include"
+export PATH="$PATH:/$HOME/Applications"  # puts appllications in path so terraform exe isnt executed from root
+export CPATH="$PATH:/$HOME/Development/include"  # loads c dependencies
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
@@ -17,13 +17,15 @@ alias ls='ls -G'
 alias ll='ls -lG'
 alias reload='source ~/.bash_profile'
 
+nvm use v10.16.3
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="miketheme"
-#ZSH_THEME="random"
+#ZSH_THEME="miketheme"
+ZSH_THEME="random"
 
 #ZSH_THEME="agnoster"
 
