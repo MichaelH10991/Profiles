@@ -1,5 +1,5 @@
 # 
-# Mike's ZSH Theme
+# Kiwi ZSH Theme
 # 
 
 PROMPT='%{$fg_bold[green]%}┌[%{$fg_bold[cyan]%}mike%{$fg_bold[green]%}]-(%{$fg_bold[white]%}%2~%{$fg_bold[green]%})-$(git_prompt_info)$(svn_prompt_info)$(battery_pct_prompt)

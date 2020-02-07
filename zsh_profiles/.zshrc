@@ -8,14 +8,18 @@ export CPATH="$PATH:/$HOME/Development/include"  # loads c dependencies
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+export LSCOLORS=GxFxCxDxBxegedabagaced # colours for ls
+export CLICOLOR=1
 
-alias c='code .'
 alias cl='clear'
 alias parrot='curl parrot.live'
 alias sp='lsof -nP -i 4TCP'
 alias ls='ls -G'
 alias ll='ls -lG'
-alias reload='source ~/.bash_profile'
+alias reload='source ~/.zshrc'
+alias ed='vi ~/.zshrc'
+alias zth='vi .oh-my-zsh/custom/themes/miketheme.zsh-theme'
+alias update='cd profiles && bash update.sh && cd ..'
 
 nvm use v10.16.3
 
@@ -25,7 +29,8 @@ nvm use v10.16.3
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="miketheme"
-ZSH_THEME="random"
+#ZSH_THEME="random"
+ZSH_THEME="miketheme"
 
 #ZSH_THEME="agnoster"
 
@@ -87,7 +92,7 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git battery)
 
 source $ZSH/oh-my-zsh.sh
 
