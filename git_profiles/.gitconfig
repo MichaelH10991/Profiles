@@ -5,7 +5,8 @@
 	comp = "!f() { git rev-list --left-right --count $branch...$2; }; f"
 	s = status
 	b = branch
-	col = "!f() { git branch; }; f"
+    col = "!f() { git branch; }; f"
+    unstage = reset HEAD --
 #	cb = "!f() { git branch | grep \* | cut -d ' ' -f2; }; f"
 [user]
 	name = Michael Humphries
