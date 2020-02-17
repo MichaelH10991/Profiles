@@ -2,8 +2,8 @@
 # Mike's ZSH Theme
 # 
 
-PROMPT='%{$fg_bold[green]%}┌[%{$fg_bold[cyan]%}mike%{$fg_bold[green]%}]-(%{$fg_bold[white]%}%2~%{$fg_bold[green]%})-λ(git_prompt_info)$(svn_prompt_info)$(battery_pct_prompt)
-└> % %{$reset_color%}'
+PROMPT='%{$fg_bold[green]%}┌[%{$fg_bold[cyan]%}mike%{$fg_bold[green]%}]-(%{$fg_bold[white]%}%2~%{$fg_bold[green]%})-$(git_prompt_info)$(svn_prompt_info)$(battery_pct_prompt)
+└λtom-> % %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="[%{$reset_color%}%{$fg[white]%}git:%{$fg_bold[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[green]%}]-"
