@@ -75,3 +75,4 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export CLICOLOR=1
 
 nvm use v10.16.3
+if [ -f ~/.bash_aliases ]; then . ~/bash_aliases; fi

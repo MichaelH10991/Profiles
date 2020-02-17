@@ -19,7 +19,6 @@ alias ll='ls -lG'
 alias reload='source ~/.zshrc'
 alias ed='vi ~/.zshrc'
 alias zth='vi .oh-my-zsh/custom/themes/miketheme.zsh-theme'
-alias update='cd profiles && bash update.sh && cd ..'
 
 nvm use v10.16.3
 
@@ -121,3 +120,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
