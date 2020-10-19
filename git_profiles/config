@@ -8,3 +8,9 @@ Host github.com-personal
     HostName github.com
     User git
     IdentityFile ~/.ssh/personal
+
+Host ec2-dev
+	HostName i-0b2432542fcab5371
+	User ubuntu
+	IdentityFile ~/.ssh/mikeh-key.pem
+	ProxyCommand sh -c 'aws ssm start-session --region eu-west-2 --profile 802434700091-its-user --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p''

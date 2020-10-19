@@ -7,7 +7,8 @@
 	b = branch
     col = "!f() { git branch; }; f"
     unstage = reset HEAD --
+	g = rev-list --left-right --count HEAD...origin/HEAD
 #	cb = "!f() { git branch | grep \* | cut -d ' ' -f2; }; f"
 [user]
 	name = Michael Humphries
-	email = mike.humphries@digital.ncsc.gov.uk
+	email = michaelhumphries1997@gmail.com

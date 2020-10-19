@@ -1,9 +1,7 @@
 #!/bin/bash
 alias_file=~/.bash_aliases
 al=$(cat <<EOF
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases;
-fi
+if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 EOF
 )
 
@@ -20,6 +18,7 @@ check_alias_file () {
         echo "alias update=\"cd profiles && bash update.sh && cd ..\"" >> $alias_file
         echo "adding alias loader script to ~/$profile"
         echo $al >> ~/$profile
+        return
     fi
 }
 
