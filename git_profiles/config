@@ -1,5 +1,3 @@
-LocalForward 32443 172.17.0.2:32443
-# LocalForward 32443 172.17.0.3:32443
 Host github.com-work
   AddKeysToAgent yes
   UseKeychain yes
@@ -14,9 +12,3 @@ Host github.com-personal
 Host crafts
     HostName crafts
     IdentityFile ~/.ssh/crafts-ec2-kp.pem
-
-Host ec2-dev
-	HostName i-0724403fa84dd0aae
-	User ubuntu
-	IdentityFile ~/.ssh/mikeh-key.pem
-	ProxyCommand sh -c 'aws ssm start-session --region eu-west-2 --profile 802434700091-its-user --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p''
